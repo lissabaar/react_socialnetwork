@@ -1,0 +1,68 @@
+.info {
+    display: grid;
+    grid-template-areas:
+        "avatar name buttons"
+        "avatar status status"
+        "items items items ";
+    grid-template-columns: 150px 1fr 1.5fr;
+}
+
+.userpic {
+    width: 135px;
+    height: 135px;
+    position: relative;
+    margin-top: -60px;
+    border: 3px solid white;
+    grid-area: avatar;
+}
+
+.name {
+    font-size: 1.7rem;
+    font-weight: 700;
+    grid-area: name;
+}
+
+.status {
+    grid-area: status;
+}
+
+.buttons {
+    align-self: center;
+    justify-self: end;
+    grid-area: buttons;
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: 1fr 50px;
+    justify-items: start;
+}
+
+.friend_req_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.friend_req_btn svg {
+    font-size: 25px;
+    margin: 0 0.4rem 0 0;
+}
+
+.status {
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+
+.items {
+    grid-area: items;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 120px);
+    margin: 1rem 0 0;
+}
+
+.item {
+    color: var(--light-text-color);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20px 1fr;
+}

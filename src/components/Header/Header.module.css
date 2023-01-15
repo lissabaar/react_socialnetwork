@@ -1,0 +1,21 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+    z-index: 1;
+    color: var(--accent-color);
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    line-height: 2rem;
+    border-radius: 0;
+}
+
+.header svg {
+    margin: 0.5rem 2rem;
+}

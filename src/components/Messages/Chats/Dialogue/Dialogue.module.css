@@ -1,0 +1,28 @@
+.dialogue {
+    display: grid;
+    grid-template-areas:
+        "avatar name"
+        "preview preview";
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    margin: 1rem 0 0;
+}
+
+.userpic {
+    width: 30px;
+    height: 30px;
+    grid-area: avatar;
+}
+
+.name {
+    grid-area: name;
+}
+
+.preview {
+    grid-area: preview;
+    font-size: 0.8rem;
+    color: var(--light-text-color);
+    height: 20px;
+    overflow: hidden;
+    margin: 0.5rem 0 0;
+}

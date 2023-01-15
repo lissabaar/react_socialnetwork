@@ -1,0 +1,122 @@
+/*https://social.webestica.com/my-profile.html*/
+
+:root {
+    --background-color: #eff2f6;
+    --standart-border: 1px solid #00000017;
+    --text-color: #515151;
+    --light-text-color: #949494;
+    --accent-color: #73b9af;
+    --accent-color-darker: #649790;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    overflow-y: overlay;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 100ms;
+}
+
+a:hover
+{
+    color: var(--accent-color);
+}
+a.active {
+    color: var(--accent-color-darker);
+}
+
+ul{
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #949494;
+}
+
+.container {
+    background: #fff;
+    border: var(--standart-border);
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.container__content,
+.content {
+    padding: 1.3rem;
+    width: 100%;
+}
+
+.main-content {
+    max-width: 1400px;
+    margin: 70px auto 0;
+    display: grid;
+    grid-template-areas:
+    "navbar page sidebar";
+    grid-template-columns: minmax(50px, 2fr) 6fr 2fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+
+.page {
+    grid-area: page;
+}
+
+.userpic {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.button {
+    background: var(--accent-color);
+    border-radius: 0.4rem;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 100ms;
+    position: relative;
+    text-align: center;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: #80c9bf;
+}
+
+.button:active {
+    top: 1px;
+}
+
+.textarea {
+    resize: vertical;
+    width: 100%;
+    height: auto;
+    background: #eef0f2;
+    border: 1px solid #e8e8e8;
+    border-radius: 0.4rem;
+    color: #656565;
+    font: inherit;
+    padding: 0.6rem;
+}
+
+.textarea:focus {
+    outline: 1px solid #d6d6d6;
+}

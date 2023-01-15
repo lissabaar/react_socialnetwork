@@ -1,0 +1,52 @@
+.post {
+    width: 100%;
+    display: grid;
+    padding: 0.6rem 0;
+    grid-template-areas:
+        "userpic name"
+        "userpic date"
+        "text text"
+        "likes likes";
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+}
+
+.post:not(:last-child) {
+    border-bottom: var(--standart-border);
+}
+
+.userpic {
+    width: 40px;
+    height: 40px;
+    grid-area: userpic;
+}
+
+.name {
+    grid-area: name;
+    font-weight: 500;
+}
+
+.date {
+    grid-area: date;
+    font-size: 0.7rem;
+    color: var(--light-text-color);
+}
+
+.text {
+    grid-area: text;
+    margin: 0.6rem 0 0;
+    line-height: 1.2rem;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+.likes {
+    grid-area: likes;
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20px 1fr;
+    margin: 0.4rem 0 0;
+    justify-self: end;
+}
