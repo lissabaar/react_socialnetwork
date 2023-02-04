@@ -39,6 +39,10 @@ ul{
     list-style: none;
 }
 
+h1, h2, h3 {
+    margin: 1rem;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
     background: #fff;

@@ -7,6 +7,7 @@ const Navbar = () => {
             <div className="container__content">
                 <ul className="menu">
                     <li className={cls.item}><NavLink to="/profile">My Profile</NavLink></li>
+                    <li className={cls.item}><NavLink to="/">News Feed</NavLink></li>
                     <li className={cls.item}><NavLink to="/messages">Messages</NavLink></li>
                     <li className={cls.item}><NavLink to="/settings">Settings</NavLink></li>
                 </ul>

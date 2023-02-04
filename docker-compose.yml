@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  social_network:
+    build: .
+    container_name: social-network
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true

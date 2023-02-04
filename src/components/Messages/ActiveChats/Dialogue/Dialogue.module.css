@@ -5,7 +5,13 @@
         "preview preview";
     grid-template-columns: 40px 1fr;
     align-items: center;
-    margin: 1rem 0 0;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.dialogue:hover {
+    background: #f8f8f8;
+    transition: background-color 100ms;
 }
 
 .userpic {

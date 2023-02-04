@@ -4,30 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-// import {
-//     createBrowserRouter,
-//     RouterProvider,
-// } from "react-router-dom";
-// import Root from "./routes/root";
-// import Messages from "./components/Messages/Messages";
-//
-// const router = createBrowserRouter([
-//     {
-//         path: "/",
-//         element: <App/>,
-//     },
-//     {
-//         path: "/messages",
-//         element: <App/>,
-//     },
-// ]);
+import state from './redux/state'
+import {addPost} from './redux/state'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
     <React.StrictMode>
-        {/*<RouterProvider router={router}/>*/}
         <BrowserRouter>
-            <App/>
+            <App state={state} addPost={addPost}/>
         </BrowserRouter>
     </React.StrictMode>
 );

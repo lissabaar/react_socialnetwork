@@ -6,10 +6,11 @@ import Profile from "./components/Profile/Profile";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Footer from "./components/Footer/Footer";
 import Messages from "./components/Messages/Messages";
+import NewsFeed from "./components/NewsFeed/NewsFeed";
 import {Route, Routes} from "react-router-dom";
 
 
-const App = (props) => {
+const App = (state) => {
     return (
         <div className="app-wrapper">
             <Header/>
@@ -17,8 +18,13 @@ const App = (props) => {
                 <Navbar/>
                 <div className='page'>
                     <Routes>
-                        <Route path='/messages/*' element={<Messages/>}/>
-                        <Route path='/profile' element={<Profile/>}/>
+                        <Route path='/' element={<NewsFeed/>}/>
+                        <Route path='/feed' element={<NewsFeed/>}/>
+                        <Route path='/messages/*' element={<Messages state={state.state.messagesPage}/>}/>
+                        <Route path='/profile' element={<Profile
+                            state={state.state.profilePage}
+                            addPost={state.addPost}
+                        />}/>
                     </Routes>
                 </div>
                 <Sidebar/>

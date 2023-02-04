@@ -3,7 +3,7 @@ import Posts from "./Posts/Posts";
 import Info from "./Info/Info";
 
 
-const Profile = () => {
+const Profile = (state) => {
     return (
         <div>
             <div className={'container'}>
@@ -16,7 +16,7 @@ const Profile = () => {
                     Posts About Friends
                 </div>
             </div>
-            <Posts/>
+            <Posts posts={state.state.posts} addPost={state.addPost}/>
         </div>
     )
 }

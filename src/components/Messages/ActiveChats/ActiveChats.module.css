@@ -1,0 +1,7 @@
+.chats {
+    border-right: var(--standart-border);
+}
+
+.chats a:hover {
+    color: var(--text-color) !important;
+}

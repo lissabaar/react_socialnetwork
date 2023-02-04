@@ -1,18 +1,14 @@
 import cls from './Messages.module.css'
-import Chats from "./Chats/Chats";
+import ActiveChats from "./ActiveChats/ActiveChats";
 import OpenChat from "./OpenChat/OpenChat";
-import {BrowserRouter, Routes} from "react-router-dom";
 
-const Messages = () => {
+
+const Messages = (state) => {
     return (
         <div className={'container'}>
             <div className={cls.messages}>
-                <Chats/>
-                {/*<BrowserRouter>*/}
-                {/*    <Routes>*/}
-                {/*    </Routes>*/}
-                {/*</BrowserRouter>*/}
-                <OpenChat/>
+                <ActiveChats dialogues={state.state.activeChats}/>
+                <OpenChat messages={state.state.openChatMessages}/>
             </div>
         </div>
     )

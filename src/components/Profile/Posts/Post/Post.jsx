@@ -3,7 +3,7 @@ import {AiOutlineLike} from "react-icons/ai";
 
 const Post = (props) => {
     return (
-        <div className={cls.post}>
+        <div className={cls.post + ' content'}>
             <img src={props.img} alt="avatar"
                  className={'userpic ' + cls.userpic}/>
             <div className={cls.name}>{props.name}</div>

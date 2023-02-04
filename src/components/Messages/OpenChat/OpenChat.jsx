@@ -1,8 +1,19 @@
 import cls from './OpenChat.module.css'
 
-const OpenChat = () => {
-    return(
-        <div className={cls.chat + ' content'}>Chester Lee</div>
+
+const OpenChat = (state) => {
+    let messagesElements = state.messages.map(m => (
+        <div className={cls.message}>
+            <img src={m.userpic} alt="userpic" className={cls.userpic + ' userpic'}/>
+            <div className={cls.text}>{m.text}</div>
+            <div className={cls.time}>{m.time}</div>
+        </div>
+    ))
+
+    return (
+        <div className={cls.chat + ' content'}>
+            {messagesElements}
+        </div>
     )
 }
 
