@@ -7,7 +7,7 @@ const Post = (props) => {
             <img src={props.img} alt="avatar"
                  className={'userpic ' + cls.userpic}/>
             <div className={cls.name}>{props.name}</div>
-            <div className={cls.date}>2 hrs ago</div>
+            <div className={cls.date}>{props.date}</div>
             <div className={cls.text}>{props.text}</div>
             <div className={cls.likes}><AiOutlineLike/>{props.likes} likes</div>
         </div>

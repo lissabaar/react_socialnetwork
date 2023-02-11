@@ -1,9 +1,9 @@
 import cls from './Profile.module.css'
-import Posts from "./Posts/Posts";
 import Info from "./Info/Info";
+import PostsContainer from "./Posts/PostsContainer";
 
 
-const Profile = (state) => {
+const Profile = (props) => {
     return (
         <div>
             <div className={'container'}>
@@ -16,7 +16,7 @@ const Profile = (state) => {
                     Posts About Friends
                 </div>
             </div>
-            <Posts posts={state.state.posts} addPost={state.addPost}/>
+            <PostsContainer store={props.store}/>
         </div>
     )
 }

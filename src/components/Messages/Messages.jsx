@@ -1,14 +1,14 @@
 import cls from './Messages.module.css'
-import ActiveChats from "./ActiveChats/ActiveChats";
-import OpenChat from "./OpenChat/OpenChat";
+import ActiveChatsContainer from "./ActiveChats/ActiveChatsContainer";
+import OpenChatContainer from "./OpenChat/OpenChatContainer";
 
 
-const Messages = (state) => {
+const Messages = (props) => {
     return (
         <div className={'container'}>
             <div className={cls.messages}>
-                <ActiveChats dialogues={state.state.activeChats}/>
-                <OpenChat messages={state.state.openChatMessages}/>
+                <ActiveChatsContainer store={props.store}/>
+                <OpenChatContainer store={props.store}/>
             </div>
         </div>
     )

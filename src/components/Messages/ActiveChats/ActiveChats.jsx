@@ -2,9 +2,9 @@ import cls from './ActiveChats.module.css'
 import Dialogue from "./Dialogue/Dialogue";
 
 
-const ActiveChats = (state) => {
+const ActiveChats = (props) => {
 
-    let dialoguesElements = state.dialogues.map(d => (
+    let dialoguesElements = props.dialogues.map(d => (
         <Dialogue
             userId={d.id}
             name={d.name}

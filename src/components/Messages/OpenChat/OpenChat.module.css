@@ -1,6 +1,10 @@
 .chat {
     height: 600px;
     overflow-y: auto;
+    overflow-x: hidden;
+    /*display: grid;*/
+    /*flex-wrap: wrap;*/
+    /*align-content: flex-end;*/
 }
 
 .message {
@@ -34,4 +38,8 @@
     grid-area: time;
     color: var(--light-text-color);
     font-size: 0.7rem;
+}
+
+.button {
+    margin-top: 0.4rem;
 }

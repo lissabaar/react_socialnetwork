@@ -10,7 +10,7 @@ import NewsFeed from "./components/NewsFeed/NewsFeed";
 import {Route, Routes} from "react-router-dom";
 
 
-const App = (state) => {
+const App = (props) => {
     return (
         <div className="app-wrapper">
             <Header/>
@@ -20,11 +20,8 @@ const App = (state) => {
                     <Routes>
                         <Route path='/' element={<NewsFeed/>}/>
                         <Route path='/feed' element={<NewsFeed/>}/>
-                        <Route path='/messages/*' element={<Messages state={state.state.messagesPage}/>}/>
-                        <Route path='/profile' element={<Profile
-                            state={state.state.profilePage}
-                            addPost={state.addPost}
-                        />}/>
+                        <Route path='/messages/*' element={<Messages store={props.store}/>}/>
+                        <Route path='/profile' element={<Profile store={props.store} />}/>
                     </Routes>
                 </div>
                 <Sidebar/>
