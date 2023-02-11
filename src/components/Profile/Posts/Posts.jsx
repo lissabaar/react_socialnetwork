@@ -4,7 +4,6 @@ import React from 'react';
 
 
 const Posts = (props) => {
-
     let newPostElm = React.createRef()
 
     let updateCurrentValue = () => {

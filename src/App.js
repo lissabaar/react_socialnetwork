@@ -20,8 +20,8 @@ const App = (props) => {
                     <Routes>
                         <Route path='/' element={<NewsFeed/>}/>
                         <Route path='/feed' element={<NewsFeed/>}/>
-                        <Route path='/messages/*' element={<Messages store={props.store}/>}/>
-                        <Route path='/profile' element={<Profile store={props.store} />}/>
+                        <Route path='/messages/*' element={<Messages/>}/>
+                        <Route path='/profile' element={<Profile/>}/>
                     </Routes>
                 </div>
                 <Sidebar/>

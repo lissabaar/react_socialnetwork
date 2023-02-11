@@ -1,27 +1,28 @@
 import React from 'react';
 import {addPostActionCreator, updateCurrentValueActionCreator} from "../../../redux/old_store";
 import Posts from "./Posts";
+import {connect} from "react-redux";
 
 
-const PostsContainer = (props) => {
-    let state = props.store.getState()
-
-    function addPost() {
-        let action = addPostActionCreator()
-        props.store.dispatch(action)
+let mapStateToProps = (state) => {
+    return {
+        posts: state.profilePage.posts,
+        currentValue: state.profilePage.currentValue
     }
-
-    let onPostChange = (val) => {
-        let action = updateCurrentValueActionCreator(val)
-        props.store.dispatch(action)
-    }
-
-    return (
-       <Posts updateCurrentValue={onPostChange}
-              addPost={addPost}
-              posts={state.profilePage.posts}
-              currentValue={state.profilePage.currentValue}/>
-    )
 }
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        addPost: () => {
+            dispatch(addPostActionCreator())
+        },
+        updateCurrentValue: (val) => {
+            dispatch(updateCurrentValueActionCreator(val))
+        },
+    }
+}
+
+
+const PostsContainer = connect(mapStateToProps, mapDispatchToProps)(Posts)
 
 export default PostsContainer
